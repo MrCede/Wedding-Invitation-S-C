@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stephanie & Camilo · Wedding 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- fuente elegante para los nombres -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* nueva paleta */
+        :root {
+            --peach: #EAB7A4;
+            --soft-peach: #F3D3C8;
+            --beige: #F7F4EC;
+            --sage: #9CAF9A;
+            --sage-dark: #6F8A73;
+        }
+
+        /* nombres cursivos */
+        .names {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        /* animación invitación */
+        .invitation-wrapper {
+            transition: opacity .5s ease, transform .5s ease;
+        }
+
+        .hidden-invitation {
+            opacity: 0;
+            transform: scale(.95);
+            pointer-events: none;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .visible-invitation {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+            height: auto;
+        }
+
+        .envelope-card {
+            transition: opacity .4s ease, transform .4s ease;
+            cursor: pointer;
+        }
+
+        .envelope-card.hidden {
+            opacity: 0;
+            transform: scale(.9);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F7F4EC] text-gray-800 antialiased min-h-screen flex items-center justify-center p-4">
+
+    <div class="max-w-4xl w-full relative">
+
+        <!-- carta inicial -->
+        <div id="envelopeContainer"
+            class="envelope-card flex flex-col items-center justify-center bg-white rounded-3xl shadow-xl p-12 border border-[#F3D3C8] mx-auto max-w-md">
+
+            <div class="w-48 h-48 mb-6 flex items-center justify-center">
+                <img src="logo1.png" class="w-full h-full object-contain" alt="logo">
+            </div>
+
+            <h2 class="text-3xl font-bold text-center text-[#6F8A73] mb-2">
+                You're invited!
+            </h2>
+
+            <p class="text-gray-500 text-sm mt-4">
+                tap to open
+            </p>
+        </div>
+
+        <!-- invitacion -->
+        <div id="invitationContent" class="invitation-wrapper hidden-invitation">
+            <main class="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-[#F3D3C8]">
+
+                <!-- Cabecera -->
+                <div class="text-center mb-12">
+                    <h1 class="names text-5xl md:text-6xl text-[#6F8A73] leading-tight">
+                        <span class="block">Stephanie</span>
+                        <span class="block text-[#EAB7A4] text-4xl md:text-5xl my-2">&</span>
+                        <span class="block">Camilo</span>
+                    </h1>
+                    <div class="flex justify-center mt-6">
+                        <div class="w-40 h-[2px] bg-[#EAB7A4] rounded-full"></div>
+                    </div>
+                    <p class="text-xl md:text-2xl text-gray-600 mt-4 inline-block pb-2">
+                        Saturday, April 25, 2026
+                    </p>
+                    <p class="text-2xl mt-6 text-gray-700 font-light italic">
+                        Join us on our Special Day!
+                    </p>
+                </div>
+
+                <!-- Schedule -->
+                <section class="mb-16">
+                    <h2 class="text-3xl font-bold text-center text-[#6F8A73] mb-8">
+                        Schedule
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Ceremony -->
+                        <div class="bg-white/80 rounded-2xl p-6 shadow-sm border border-[#F3D3C8]">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <span class="text-2xl font-medium text-[#EAB7A4] min-w-[100px]">
+                                    3:00 PM
+                                </span>
+                                <div>
+                                    <h3 class="text-xl font-medium text-gray-800">
+                                        Ceremony 💍
+                                    </h3>
+                                    <p class="text-gray-600 mt-1">
+                                        Meet us at Cos Cob Park. The ceremony will take place at the gazebo overlooking
+                                        the beach.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4 rounded-xl overflow-hidden border border-[#F3D3C8]">
+                                <iframe
+                                    src="https://www.google.com/maps?q=Cos+Cob+Park+22+Sound+Shore+Dr+Greenwich+CT+06830&output=embed"
+                                    width="100%" height="200" style="border:0" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- Reception -->
+                        <div class="bg-white/80 rounded-2xl p-6 shadow-sm border border-[#F3D3C8]">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <span class="text-2xl font-medium text-[#EAB7A4] min-w-[100px]">
+                                    5:00 PM
+                                </span>
+                                <div>
+                                    <h3 class="text-xl font-medium text-gray-800">
+                                        Reception 🥂
+                                    </h3>
+                                    <p class="text-gray-600 mt-1">
+                                        Following the ceremony, please join us for a small reception and a toast.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4 rounded-xl overflow-hidden border border-[#F3D3C8]">
+                                <iframe
+                                    src="https://www.google.com/maps?q=1+Radisson+Plaza+New+Rochelle+NY+10801&output=embed"
+                                    width="100%" height="200" style="border:0" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dress Code -->
+                <section class="mb-16">
+                    <div class="bg-[#F3D3C8]/40 rounded-3xl p-8 text-center border border-[#F3D3C8]">
+                        <h2 class="text-2xl font-bold text-[#6F8A73] mb-3">
+                            Cocktail Attire
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Think fresh spring colors—and kindly save white for the bride.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+                            <div class="bg-white/90 rounded-xl p-4 shadow-sm border border-[#F3D3C8]">
+                                <h3 class="font-medium">For her</h3>
+                                <p class="text-sm text-gray-600">Floral midi dress, pastels</p>
+                            </div>
+                            <div class="bg-white/90 rounded-xl p-4 shadow-sm border border-[#F3D3C8]">
+                                <h3 class="font-medium">For him</h3>
+                                <p class="text-sm text-gray-600">Linen suit, light colors</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Gifts / QR -->
+                <section class="mb-16">
+                    <div class="bg-[#F7F4EC] rounded-3xl p-8 border border-[#F3D3C8]">
+
+                        <h2 class="text-2xl font-bold text-[#6F8A73] text-center mb-8">
+                            Gifts
+                        </h2>
+
+                        <div class="grid md:grid-cols-2 gap-8 items-center">
+
+                            <!-- Texto -->
+                            <div class="text-gray-700 text-lg leading-relaxed text-justify">
+
+                                <p class="mb-4">
+                                    Your presence is the greatest gift of all.
+                                </p>
+
+                                <p class="mb-4">
+                                    If you would like to honor us with a gift, a contribution toward our future together
+                                    would be warmly appreciated.
+                                </p>
+
+                                <p class="mb-4">
+                                    For your convenience, a QR code has been provided—simply scan to make a
+                                    contribution.
+                                </p>
+
+                                <p>
+                                    Thank you for celebrating with us ❤️
+                                </p>
+
+                            </div>
+
+                            <!-- QR -->
+                            <div class="flex flex-col items-center">
+                                <div
+                                    class="w-72 h-72 bg-white border-2 border-dashed border-[#EAB7A4] rounded-2xl flex items-center justify-center overflow-hidden">
+                                    <img src="zelle.png" alt="Zelle QR" class="w-full h-full object-contain rounded-xl">
+                                </div>
+
+                                <p class="text-sm text-gray-500 mt-3">
+                                    Scan with your banking app
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- RSVP -->
+                <section class="mb-16 text-center">
+                    <a href="https://withjoy.com/stephanie-and-camilo-apr-26/rsvp" target="_blank"
+                        class="inline-block bg-[#9CAF9A] hover:bg-[#6F8A73] text-white px-10 py-4 rounded-full text-xl transition shadow-md">
+                        RSVP
+                    </a>
+                    <p class="text-gray-600 mt-4">
+                        Please RSVP by <span class="font-medium">March 20, 2026</span>
+                    </p>
+                </section>
+
+                <footer class="border-t border-[#F3D3C8] pt-8 text-center text-sm text-gray-500">
+                    <p>Stephanie & Camilo · Wedding 2026</p>
+                    <p class="mt-2 text-xs opacity-60">by DCM Development</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const envelope = document.getElementById('envelopeContainer')
+            const invitation = document.getElementById('invitationContent')
+
+            function openInvitation() {
+                envelope.classList.add('hidden')
+                invitation.classList.remove('hidden-invitation')
+                invitation.classList.add('visible-invitation')
+            }
+
+            envelope.addEventListener('click', openInvitation)
+        })()
+    </script>
+
+</body>
+
+</html>
