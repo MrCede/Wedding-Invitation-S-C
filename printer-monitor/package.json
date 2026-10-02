@@ -1,0 +1,13 @@
+{
+  "name": "printer-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monitor de ping (corazón palpitante) para printer.dcmdevelop.com",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

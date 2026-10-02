@@ -1,0 +1,16 @@
+# Linux / Raspberry Pi: copiar a /etc/systemd/system/, editar token y ruta, y luego
+#   sudo systemctl daemon-reload && sudo systemctl enable --now printer-agent
+[Unit]
+Description=Agente de ping para printer.dcmdevelop.com
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment=AGENT_TOKEN=CAMBIA_ESTE_TOKEN
+Environment=TARGETS=192.168.1.3,192.168.1.4
+ExecStart=/usr/bin/python3 /opt/printer-agent/ping_agent.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
